@@ -1,5 +1,5 @@
-import { Container, CssBaseline, Typography } from "@mui/material";
-import { Header, Hero, Layout } from "./components";
+import { Container, CssBaseline } from "@mui/material";
+import { Footer, Header, Hero, Layout } from "./components";
 import { useState } from "react";
 import { darkTheme, lightTheme } from "./components/theme";
 import { ThemeProvider } from "@emotion/react";
@@ -16,7 +16,9 @@ function App() {
           <Hero isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         </Container>
       </Layout>
-      <Typography>Footer</Typography>
+      <Container maxWidth="xl">
+        <Footer isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      </Container>
     </ThemeProvider>
   );
 }
