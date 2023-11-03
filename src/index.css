@@ -6,4 +6,35 @@
   font-family: "Montserrat", sans-serif !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
-  }
+}
+
+.custom-drawer {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -300px; /* Initially hidden off the screen */
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s;
+}
+
+.custom-drawer.open {
+  left: 0; /* Display the drawer when 'open' class is added */
+}
+
+.toggle-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.drawer-content {
+  padding: 20px;
+}
+
+.drawer-content button {
+  margin-top: 10px;
+}

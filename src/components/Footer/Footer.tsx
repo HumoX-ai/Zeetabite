@@ -1,7 +1,7 @@
 import { Box, Divider, IconButton, Typography } from "@mui/material";
 import { darkMode } from "../Header/Header";
 import { BsFacebook, BsInstagram, BsTelegram, BsYoutube } from "react-icons/bs";
-export const Footer = ({ isDarkMode, setIsDarkMode }: darkMode) => {
+export const Footer = ({ isDarkMode }: darkMode) => {
   return (
     <Box>
       <Box
@@ -25,27 +25,38 @@ export const Footer = ({ isDarkMode, setIsDarkMode }: darkMode) => {
           *ZETTABAYT
         </Typography>
 
-        <Typography
-          variant="h5"
-          sx={{ display: "flex", gap: 0.5, justifyContent: "center" }}
-        >
-          О НАС СВЯЗАТЬСЯ С НАМИ ПРОДАВАЙТЕ НА
-          <Typography variant="h5" fontWeight={600}>
-            *ZETTABAYT
-          </Typography>
+        <Typography variant="h5">
+          О НАС СВЯЗАТЬСЯ С НАМИ ПРОДАВАЙТЕ НА{"  "}
+          <span style={{ fontWeight: 600 }}>*ZETTABAYT</span>
         </Typography>
-        <Box>
-          <IconButton>
-            <BsInstagram />
+        <Box sx={{ display: "flex", justifyContent: "center", gap: 3 }}>
+          <IconButton
+            sx={{
+              color: isDarkMode ? "#fff" : "#000",
+            }}
+          >
+            <BsInstagram size={30} />
           </IconButton>
-          <IconButton>
-            <BsTelegram />
+          <IconButton
+            sx={{
+              color: isDarkMode ? "#fff" : "#000",
+            }}
+          >
+            <BsTelegram size={30} />
           </IconButton>
-          <IconButton>
-            <BsYoutube />
+          <IconButton
+            sx={{
+              color: isDarkMode ? "#fff" : "#000",
+            }}
+          >
+            <BsYoutube size={30} />
           </IconButton>
-          <IconButton>
-            <BsFacebook />
+          <IconButton
+            sx={{
+              color: isDarkMode ? "#fff" : "#000",
+            }}
+          >
+            <BsFacebook size={30} />
           </IconButton>
         </Box>
       </Box>
@@ -57,6 +68,14 @@ export const Footer = ({ isDarkMode, setIsDarkMode }: darkMode) => {
         }}
       >
         <Divider />
+      </Box>
+      <Box sx={{ mb: 2, display: "flex", justifyContent: "space-between" }}>
+        <Typography variant="h5" fontWeight={600}>
+          © *ZETTABAYT 2023
+        </Typography>
+        <Typography variant="h5">
+          POWERED BY {"  "} <span style={{ fontWeight: 600 }}>ST40 </span>
+        </Typography>
       </Box>
     </Box>
   );
